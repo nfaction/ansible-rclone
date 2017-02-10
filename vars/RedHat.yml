@@ -3,6 +3,7 @@
 PACKAGES:
   - unzip
   - man
+  - file
 
 MAN_PAGES:
   OWNER: root
