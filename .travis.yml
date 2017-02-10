@@ -34,17 +34,17 @@ script:
   # complete with an exit status of 0 for a pass, and non-zero for a failure.
   #
   # This example tests whether 'hello' exists in /tmp/hello.txt.
-  - >
-    sudo docker exec ansible-rclone bash -c 'file ~/.rclone.conf' | grep -q 'ASCII'
-    && (echo 'Test for role result: pass' && exit 0)
-    || (echo 'Test for role result: fail' && exit 1)
+  # - >
+  #   sudo docker exec ansible-rclone bash -c 'file ~/.rclone.conf' | grep -q 'ASCII'
+  #   && (echo 'Test for role result: pass' && exit 0)
+  #   || (echo 'Test for role result: fail' && exit 1)
 
-  # 4. Idempotence test (run playbook again to confirm nothing changes)
-  - >
-    sudo docker exec ansible-rclone ansible-playbook /etc/ansible/roles/role_under_test/tests/test.yml -i tests/inventory --connection=local
-    | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
+  # # 4. Idempotence test (run playbook again to confirm nothing changes)
+  # - >
+  #   sudo docker exec ansible-rclone ansible-playbook /etc/ansible/roles/role_under_test/tests/test.yml -i tests/inventory --connection=local
+  #   | grep -q 'changed=0.*failed=0'
+  #   && (echo 'Idempotence test: pass' && exit 0)
+  #   || (echo 'Idempotence test: fail' && exit 1)
 
 
 notifications:
