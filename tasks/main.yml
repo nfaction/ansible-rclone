@@ -63,4 +63,6 @@
 
 - name: install rclone - install manpage
   shell: mandb
+  register: mandb_result
   become: yes
+  changed_when: "mandb_result.rc != 2"

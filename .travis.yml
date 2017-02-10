@@ -35,7 +35,7 @@ script:
   #
   # This example tests whether 'hello' exists in /tmp/hello.txt.
   - >
-    sudo docker exec ansible-rclone bash -c file ~/.rclone.conf | grep -q 'ASCII'
+    sudo docker exec ansible-rclone bash -c 'file ~/.rclone.conf' | grep -q 'ASCII'
     && (echo 'Test for role result: pass' && exit 0)
     || (echo 'Test for role result: fail' && exit 1)
 
