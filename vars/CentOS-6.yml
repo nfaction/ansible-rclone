@@ -3,7 +3,7 @@
 PACKAGES:
   - unzip
   - man
-  - man-db
+  - makewhatis
 
 MAN_PAGES:
   OWNER: root
