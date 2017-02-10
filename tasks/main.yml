@@ -31,6 +31,7 @@
     src: https://github.com/ncw/rclone/releases/download/v{{ rclone_version }}/rclone-v{{ rclone_version }}-linux-amd64.zip
     dest: "{{ rclone_setup_tmp_dir}}"
     copy: no
+    creates: '/tmp/rclone_setup/rclone-v{{ rclone_version }}-linux-amd64'
   become: yes
 
 - name: install rclone - copy binary
