@@ -48,8 +48,8 @@
     path: /usr/local/share/man/man1
     state: directory
     mode: 0775
-    owner: {{ MAN_PAGES.OWNER }}
-    group: {{ MAN_PAGES.GROUP }}
+    owner: '{{ MAN_PAGES.OWNER }}'
+    group: '{{ MAN_PAGES.GROUP }}'
 
 - name: install rclone - copy manpage
   copy:
